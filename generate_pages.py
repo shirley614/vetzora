@@ -3,7 +3,26 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ===== Shared Header & Footer =====
-NAV_HTML = """  <header id="header" class="always-solid">
+def build_nav_html():
+    groups_order = [
+        "Antiparasitic APIs", "Antibacterial APIs", "Anticoccidial / Coccidiostat APIs",
+        "Reproductive & Hormonal APIs", "Cardiovascular & Metabolic APIs",
+        "Anti-inflammatory & Immunomodulatory APIs", "Growth Promotant APIs", "Other Veterinary APIs",
+    ]
+    by_group = {}
+    for p in PRODUCTS:
+        by_group.setdefault(p["category_group"], []).append(p)
+    dropdown = ""
+    for g in groups_order:
+        items = by_group.get(g)
+        if not items:
+            continue
+        dropdown += f'              <div class="dropdown-label">{g}</div>\n'
+        for p in items:
+            dropdown += f'              <a href="/veterinary-apis/{p["slug"]}/">{p["name"]}</a>\n'
+    dropdown += '              <div class="dropdown-label" style="margin-top:8px;border-top:1px solid #e2e8f0;padding-top:8px">All Products</div>\n'
+    dropdown += '              <a href="/veterinary-apis/" style="font-weight:600;color:#2563eb">View All Veterinary APIs</a>\n'
+    return f'''  <header id="header" class="always-solid">
     <div class="container nav-container">
       <a href="/" class="logo">
         <span class="logo-icon">V</span>
@@ -16,22 +35,7 @@ NAV_HTML = """  <header id="header" class="always-solid">
           <li class="nav-dropdown">
             <span class="nav-link-text">Veterinary APIs <span class="nav-arrow">&#9662;</span></span>
             <div class="nav-dropdown-content">
-              <div class="dropdown-label">Antiparasitic APIs</div>
-              <a href="/veterinary-apis/doramectin/">Doramectin</a>
-              <a href="/veterinary-apis/selamectin/">Selamectin</a>
-              <a href="/veterinary-apis/emodepside/">Emodepside</a>
-              <a href="/veterinary-apis/milbemycin-oxime/">Milbemycin Oxime</a>
-              <a href="/veterinary-apis/derquantel/">Derquantel</a>
-              <div class="dropdown-label">Antibacterial APIs</div>
-              <a href="/veterinary-apis/virginiamycin/">Virginiamycin</a>
-              <a href="/veterinary-apis/paromomycin-sulfate/">Paromomycin Sulfate</a>
-              <a href="/veterinary-apis/pradofloxacin/">Pradofloxacin</a>
-              <div class="dropdown-label">Other Veterinary APIs</div>
-              <a href="/veterinary-apis/narasin/">Narasin</a>
-              <a href="/veterinary-apis/lasalocid-sodium/">Lasalocid Sodium</a>
-              <div class="dropdown-label" style="margin-top:8px;border-top:1px solid #e2e8f0;padding-top:8px">All Products</div>
-              <a href="/veterinary-apis/" style="font-weight:600;color:#2563eb">View All Veterinary APIs</a>
-            </div>
+{dropdown}            </div>
           </li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/contact/">Contact Us</a></li>
@@ -41,7 +45,9 @@ NAV_HTML = """  <header id="header" class="always-solid">
         <span></span><span></span><span></span>
       </button>
     </div>
-  </header>"""
+  </header>'''
+
+# NAV_HTML is assigned after PRODUCTS is fully defined (see below)
 
 FOOTER_HTML = """  <footer class="footer">
     <div class="container footer-container">
@@ -332,6 +338,80 @@ PRODUCTS = [
     },
 ]
 
+# ===== New Products (added per request) =====
+def make_product(slug, name, category, category_group, product_type, cas=None, related=None):
+    related = related or []
+    intro = (f"{name} is a {product_type.lower()} used in veterinary medicine and animal health "
+             f"applications. Vetzora supplies {name} raw material for veterinary pharmaceutical manufacturers "
+             f"and animal health companies worldwide.")
+    supply = (f"Our {name} supply is intended for qualified pharmaceutical and veterinary drug manufacturers. "
+              f"Product specifications, COA, technical documentation, packaging options and commercial supply "
+              f"conditions are available upon request.")
+    apps = (f"Vetzora provides {name} raw material for veterinary pharmaceutical manufacturers and animal health "
+            f"companies. Customers can request product specifications, COA and technical information for evaluation "
+            f"and sourcing purposes.")
+    seo_title = f"{name} API Manufacturer & Supplier in China | Vetzora"
+    meta = (f"{name} API supplier from China. Vetzora provides {name} ({product_type}) for veterinary pharmaceutical "
+            f"and animal health applications, with technical and commercial supply support.")
+    faq = [
+        (f"What is {name}?", f"{name} is a {product_type.lower()} used in veterinary medicine and animal health applications."),
+        (f"Does Vetzora supply {name} from China?", f"Vetzora provides {name} sourcing and commercial supply support from China for qualified veterinary pharmaceutical customers."),
+        (f"Can Vetzora provide a COA for {name}?", "Yes. Product specifications and COA documentation can be provided for customer evaluation, subject to the specific product and supply arrangement."),
+        (f"What is the MOQ for {name}?", "MOQ depends on product specification, packaging and order quantity. Please contact Vetzora for a commercial quotation."),
+        (f"Can Vetzora supply {name} internationally?", "Yes. Vetzora supports international customers sourcing veterinary pharmaceutical ingredients from China."),
+    ]
+    return {
+        "slug": slug, "name": name, "category": category, "category_group": category_group,
+        "cas": cas, "product_type": product_type, "application": "Animal Health",
+        "introduction": intro, "supply_info": supply, "applications_text": apps,
+        "seo_title": seo_title, "meta_description": meta, "faq": faq, "related": related,
+    }
+
+NEW_PRODUCTS = [
+    # Antiparasitic APIs
+    make_product("fluralaner", "Fluralaner", "Antiparasitic", "Antiparasitic APIs", "Isoxazoline Ectoparasiticide"),
+    make_product("moxidectin", "Moxidectin", "Antiparasitic", "Antiparasitic APIs", "Macrocyclic Lactone Antiparasitic"),
+    make_product("fipronil", "Fipronil", "Antiparasitic", "Antiparasitic APIs", "Phenylpyrazole Ectoparasiticide"),
+    make_product("flumethrin", "Flumethrin", "Antiparasitic", "Antiparasitic APIs", "Pyrethroid Ectoparasiticide"),
+    make_product("monepantel", "Monepantel", "Antiparasitic", "Antiparasitic APIs", "Amino-acetonitrile Derivative (AAD) Anthelmintic"),
+    # Antibacterial APIs
+    make_product("valnemulin-hydrochloride", "Valnemulin Hydrochloride", "Antibacterial", "Antibacterial APIs", "Pleuromutilin Antibiotic"),
+    make_product("tulathromycin", "Tulathromycin", "Antibacterial", "Antibacterial APIs", "Macrolide Antibiotic"),
+    # Anticoccidial / Coccidiostat APIs
+    make_product("toltrazuril", "Toltrazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Triazinone Coccidiostat"),
+    make_product("ponazuril", "Ponazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Triazinone Coccidiostat"),
+    make_product("diclazuril", "Diclazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Benzeneacetonitrile Coccidiostat (Pure & Premix)"),
+    make_product("decoquinate", "Decoquinate", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Quinolone Coccidiostat (Pure & Premix)"),
+    # Reproductive & Hormonal APIs
+    make_product("chorionic-gonadotrophin-hcg", "Chorionic Gonadotrophin (HCG)", "Hormonal", "Reproductive & Hormonal APIs", "Gonadotropin Hormone"),
+    make_product("serum-gonadotrophin-pmsg", "Serum Gonadotrophin (PMSG)", "Hormonal", "Reproductive & Hormonal APIs", "Gonadotropin Hormone"),
+    make_product("cloprostenol-sodium", "Cloprostenol Sodium", "Hormonal", "Reproductive & Hormonal APIs", "Prostaglandin Analog (Luteolytic)"),
+    make_product("d-cloprostenol-sodium", "D-Cloprostenol Sodium", "Hormonal", "Reproductive & Hormonal APIs", "Prostaglandin Analog (Luteolytic)"),
+    make_product("altrenogest", "Altrenogest", "Hormonal", "Reproductive & Hormonal APIs", "Synthetic Progestogen"),
+    make_product("dinoprost-trometamol", "Dinoprost Trometamol", "Hormonal", "Reproductive & Hormonal APIs", "Prostaglandin F2alpha Preparation"),
+    make_product("dinoprost", "Dinoprost", "Hormonal", "Reproductive & Hormonal APIs", "Prostaglandin F2alpha"),
+    make_product("denaverine-hydrochloride", "Denaverine Hydrochloride", "Hormonal", "Reproductive & Hormonal APIs", "Spasmolytic / Tocolytic Agent"),
+    make_product("oxytocin", "Oxytocin", "Hormonal", "Reproductive & Hormonal APIs", "Pituitary Peptide Hormone"),
+    make_product("carbetocin", "Carbetocin", "Hormonal", "Reproductive & Hormonal APIs", "Long-acting Oxytocin Analog"),
+    make_product("alarelin-acetate", "Alarelin Acetate", "Hormonal", "Reproductive & Hormonal APIs", "GnRH Agonist (Analog)"),
+    make_product("gonadorelin-acetate", "Gonadorelin Acetate", "Hormonal", "Reproductive & Hormonal APIs", "GnRH Agonist"),
+    make_product("triptorelin-acetate", "Triptorelin Acetate", "Hormonal", "Reproductive & Hormonal APIs", "GnRH Agonist"),
+    make_product("lecirelin-acetate", "Lecirelin Acetate", "Hormonal", "Reproductive & Hormonal APIs", "GnRH Agonist"),
+    make_product("deslorelin-acetate", "Deslorelin Acetate", "Hormonal", "Reproductive & Hormonal APIs", "GnRH Agonist"),
+    make_product("buserelin-acetate", "Buserelin Acetate", "Hormonal", "Reproductive & Hormonal APIs", "GnRH Agonist"),
+    # Cardiovascular & Metabolic APIs
+    make_product("pimobendan", "Pimobendan", "Cardiovascular", "Cardiovascular & Metabolic APIs", "Inodilator (PDE-III/IV Inhibitor)"),
+    make_product("trilostane", "Trilostane", "Cardiovascular", "Cardiovascular & Metabolic APIs", "Steroid Synthesis Inhibitor (3beta-HSD)"),
+    make_product("menbuton", "Menbuton", "Cardiovascular", "Cardiovascular & Metabolic APIs", "Choleretic / Hepatobiliary Agent"),
+    # Anti-inflammatory & Immunomodulatory APIs
+    make_product("oclacitinib-maleate", "Oclacitinib Maleate", "Anti-inflammatory", "Anti-inflammatory & Immunomodulatory APIs", "Janus Kinase (JAK) Inhibitor"),
+    # Growth Promotant APIs
+    make_product("zilpaterol-hcl", "Zilpaterol HCl", "Growth Promotant", "Growth Promotant APIs", "Beta-2 Agonist (Growth Promotant)"),
+]
+
+PRODUCTS.extend(NEW_PRODUCTS)
+NAV_HTML = build_nav_html()
+
 def get_product_by_slug(slug):
     for p in PRODUCTS:
         if p["slug"] == slug:
@@ -447,7 +527,7 @@ def generate_product_page(p):
           <h2>{p['name']} Product Information</h2>
           <table class="info-table">
             <tr><th>Product Name</th><td>{p['name']}</td></tr>
-            <tr><th>CAS No.</th><td>{p['cas']}</td></tr>
+            <tr><th>CAS No.</th><td>{p.get('cas', 'Available upon request')}</td></tr>
             <tr><th>Product Type</th><td>{p['product_type']}</td></tr>
             <tr><th>Category</th><td>Veterinary API</td></tr>
             <tr><th>Application</th><td>{p['application']}</td></tr>
@@ -582,7 +662,7 @@ category_html += f"""    </div>
   <section class="seo-text-section">
     <div class="container">
       <h2>Veterinary API Supplier from China</h2>
-      <p>Vetzora is a China-based veterinary API supplier providing active pharmaceutical ingredients for animal health applications. Our product portfolio covers antiparasitic APIs (Doramectin, Selamectin, Emodepside, Milbemycin Oxime, Derquantel), antibacterial APIs (Virginiamycin, Paromomycin Sulfate, Pradofloxacin) and other veterinary pharmaceutical ingredients (Narasin, Lasalocid Sodium).</p>
+      <p>Vetzora is a China-based veterinary API supplier providing active pharmaceutical ingredients for animal health applications. Our product portfolio covers antiparasitic APIs, antibacterial APIs, anticoccidial / coccidiostat APIs, reproductive &amp; hormonal APIs, cardiovascular &amp; metabolic APIs, anti-inflammatory &amp; immunomodulatory APIs and growth promotant APIs for companion animals, livestock and animal health manufacturers worldwide.</p>
       <p>We support international customers with product specifications, COA documentation, technical information and commercial supply solutions. Contact Vetzora for veterinary API sourcing from China.</p>
     </div>
   </section>
