@@ -62,19 +62,64 @@ document.querySelectorAll('.faq-question').forEach(function(q) {
   });
 });
 
-// ===== Contact Form (mailto fallback) =====
+// ===== Contact Form (Formspree async submit + mailto fallback) =====
 var contactForm = document.getElementById('contact-form');
-if (contactForm && contactForm.getAttribute('action').indexOf('formspree') === -1) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var company = document.getElementById('company') ? document.getElementById('company').value || 'N/A' : 'N/A';
-    var message = document.getElementById('message').value;
+if (contactForm) {
+  var formAction = contactForm.getAttribute('action') || '';
+  var isFormspree = formAction.indexOf('formspree.io') !== -1;
+  var feedback = document.getElementById('form-feedback');
 
+  function showFeedback(msg, type) {
+    if (!feedback) return;
+    feedback.textContent = msg;
+    feedback.className = 'form-feedback ' + (type || '');
+  }
+
+  function mailtoFallback(form) {
+    var name = form.querySelector('#name').value;
+    var email = form.querySelector('#email').value;
+    var company = form.querySelector('#company') ? form.querySelector('#company').value || 'N/A' : 'N/A';
+    var message = form.querySelector('#message').value;
     var subject = 'Inquiry from ' + name + (company !== 'N/A' ? ' (' + company + ')' : '');
     var body = 'Name: ' + name + '\nEmail: ' + email + '\nCompany: ' + company + '\n\nMessage:\n' + message;
-
     window.location.href = 'mailto:info@vetzora.cn?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
+  contactForm.addEventListener('submit', function(e) {
+    if (!isFormspree) {
+      e.preventDefault();
+      mailtoFallback(contactForm);
+      return;
+    }
+    e.preventDefault();
+    var btn = contactForm.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    showFeedback('', '');
+
+    fetch(formAction, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        contactForm.reset();
+        showFeedback('Thanks! Your message has been sent. We will get back to you shortly.', 'success');
+      } else {
+        response.json().then(function(data) {
+          var msg = data && data.errors ? data.errors.map(function(err){ return err.message; }).join(', ') : 'Something went wrong. Please try again or email us directly at info@vetzora.cn.';
+          showFeedback(msg, 'error');
+        }).catch(function() {
+          showFeedback('Something went wrong. Please try again or email us directly at info@vetzora.cn.', 'error');
+        });
+      }
+    }).catch(function() {
+      // Network error -> degrade to mailto
+      mailtoFallback(contactForm);
+      if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+    }).finally(function() {
+      if (btn && !contactForm.querySelector('#form-feedback').textContent.includes('sent')) {
+        btn.disabled = false; btn.textContent = 'Send Message';
+      }
+    });
   });
 }

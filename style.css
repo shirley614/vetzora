@@ -536,6 +536,18 @@ img { max-width: 100%; }
   background: var(--color-white); box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
 }
 .form-group textarea { resize: vertical; }
+.form-feedback {
+  margin-top: 16px; padding: 12px 16px; border-radius: var(--radius-md);
+  font-size: 14px; font-weight: 500; display: none;
+}
+.form-feedback.success {
+  display: block; background: #ecfdf5; color: #047857;
+  border: 1px solid #a7f3d0;
+}
+.form-feedback.error {
+  display: block; background: #fef2f2; color: #b91c1c;
+  border: 1px solid #fecaca;
+}
 
 /* ===== Blog ===== */
 .blog-grid {
