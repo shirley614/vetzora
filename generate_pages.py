@@ -527,7 +527,7 @@ def generate_product_page(p):
           <h2>{p['name']} Product Information</h2>
           <table class="info-table">
             <tr><th>Product Name</th><td>{p['name']}</td></tr>
-            <tr><th>CAS No.</th><td>{p.get('cas', 'Available upon request')}</td></tr>
+            <tr><th>CAS No.</th><td>{p['cas'] if p.get('cas') else 'Available upon request'}</td></tr>
             <tr><th>Product Type</th><td>{p['product_type']}</td></tr>
             <tr><th>Category</th><td>Veterinary API</td></tr>
             <tr><th>Application</th><td>{p['application']}</td></tr>
