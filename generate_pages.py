@@ -86,7 +86,6 @@ FOOTER_HTML = """  <footer class="footer">
       <div class="footer-contact">
         <h4>Contact</h4>
         <p>Email: info@vetzora.cn</p>
-        <p>Phone: +86 19926584451</p>
         <p>Web: vetzora.cn</p>
       </div>
       <div class="footer-connect">
@@ -577,7 +576,6 @@ def generate_product_page(p):
           <a href="/contact/" class="btn btn-primary">Request a Quote</a>
           <a href="mailto:info@vetzora.cn" class="btn btn-dark" style="margin-top:8px">Email Us</a>
           <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--color-border)">
-            <p style="font-size:13px"><strong>Phone:</strong><br>+86 19926584451</p>
             <p style="font-size:13px;margin-top:8px"><strong>Email:</strong><br>info@vetzora.cn</p>
           </div>
         </aside>
@@ -710,7 +708,6 @@ about_html = f"""<!DOCTYPE html>
           "name": "Vetzora",
           "url": "https://vetzora.cn/",
           "email": "info@vetzora.cn",
-          "telephone": "+86 19926584451",
           "description": "China-based veterinary API manufacturer and supplier providing veterinary active pharmaceutical ingredients worldwide."
         }}
       }},
@@ -818,7 +815,7 @@ contact_html = f"""<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Vetzora &mdash; Veterinary API Supplier</title>
-  <meta name="description" content="Contact Vetzora for veterinary API product specifications, COA, pricing and commercial supply. Email: info@vetzora.cn, Phone: +86 19926584451.">
+  <meta name="description" content="Contact Vetzora for veterinary API product specifications, COA, pricing and commercial supply. Email: info@vetzora.cn.">
   <link rel="canonical" href="https://vetzora.cn/contact/">
   <meta name="robots" content="index, follow">
 {FAVICON}  <link rel="stylesheet" href="/style.css">
@@ -835,11 +832,9 @@ contact_html = f"""<!DOCTYPE html>
           "name": "Vetzora",
           "url": "https://vetzora.cn/",
           "email": "info@vetzora.cn",
-          "telephone": "+86 19926584451",
           "contactPoint": {{
             "@type": "ContactPoint",
-            "telephone": "+86 19926584451",
-            "email": "info@vetzora.cn",
+              "email": "info@vetzora.cn",
             "contactType": "sales",
             "areaServed": "Worldwide"
           }}
@@ -889,15 +884,6 @@ contact_html = f"""<!DOCTYPE html>
             <div class="contact-detail">
               <h4>Email</h4>
               <p>info@vetzora.cn</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-            </div>
-            <div class="contact-detail">
-              <h4>Phone</h4>
-              <p>+86 19926584451</p>
             </div>
           </div>
           <div class="contact-item">
