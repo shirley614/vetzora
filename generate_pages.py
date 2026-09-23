@@ -76,6 +76,21 @@ FOOTER_HTML = """  <footer class="footer">
         <p>Phone: +86 19926584451</p>
         <p>Web: vetzora.cn</p>
       </div>
+      <div class="footer-connect">
+        <h4>Scan to Connect</h4>
+        <div class="qr-grid">
+          <div class="qr-card">
+            <img src="/img/whatsapp-qr.svg" alt="WhatsApp QR code for Vetzora" width="92" height="92" loading="lazy">
+            <span class="qr-label">WhatsApp</span>
+            <a href="https://wa.me/8619926584451" target="_blank" rel="noopener">+86 19926584451</a>
+          </div>
+          <div class="qr-card">
+            <img src="/img/telegram-qr.svg" alt="Telegram QR code for Vetzora" width="92" height="92" loading="lazy">
+            <span class="qr-label">Telegram</span>
+            <a href="https://t.me/Shirley4451" target="_blank" rel="noopener">@Shirley4451</a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
