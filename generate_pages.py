@@ -597,6 +597,33 @@ about_html = f"""<!DOCTYPE html>
   <link rel="canonical" href="https://vetzora.cn/about/">
   <meta name="robots" content="index, follow">
 {FAVICON}  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@graph": [
+      {{
+        "@type": "AboutPage",
+        "name": "About Vetzora",
+        "url": "https://vetzora.cn/about/",
+        "publisher": {{
+          "@type": "Organization",
+          "name": "Vetzora",
+          "url": "https://vetzora.cn/",
+          "email": "info@vetzora.cn",
+          "telephone": "+86 19926584451",
+          "description": "China-based veterinary API manufacturer and supplier providing veterinary active pharmaceutical ingredients worldwide."
+        }}
+      }},
+      {{
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {{"@type":"ListItem","position":1,"name":"Home","item":"https://vetzora.cn/"}},
+          {{"@type":"ListItem","position":2,"name":"About","item":"https://vetzora.cn/about/"}}
+        ]
+      }}
+    ]
+  }}
+  </script>
 </head>
 <body>
 
@@ -695,6 +722,39 @@ contact_html = f"""<!DOCTYPE html>
   <link rel="canonical" href="https://vetzora.cn/contact/">
   <meta name="robots" content="index, follow">
 {FAVICON}  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@graph": [
+      {{
+        "@type": "ContactPage",
+        "name": "Contact Vetzora",
+        "url": "https://vetzora.cn/contact/",
+        "publisher": {{
+          "@type": "Organization",
+          "name": "Vetzora",
+          "url": "https://vetzora.cn/",
+          "email": "info@vetzora.cn",
+          "telephone": "+86 19926584451",
+          "contactPoint": {{
+            "@type": "ContactPoint",
+            "telephone": "+86 19926584451",
+            "email": "info@vetzora.cn",
+            "contactType": "sales",
+            "areaServed": "Worldwide"
+          }}
+        }}
+      }},
+      {{
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {{"@type":"ListItem","position":1,"name":"Home","item":"https://vetzora.cn/"}},
+          {{"@type":"ListItem","position":2,"name":"Contact","item":"https://vetzora.cn/contact/"}}
+        ]
+      }}
+    ]
+  }}
+  </script>
 </head>
 <body>
 
@@ -814,6 +874,32 @@ blog_html = f"""<!DOCTYPE html>
   <link rel="canonical" href="https://vetzora.cn/blog/">
   <meta name="robots" content="index, follow">
 {FAVICON}  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@graph": [
+      {{
+        "@type": "CollectionPage",
+        "name": "Vetzora Knowledge Center",
+        "url": "https://vetzora.cn/blog/",
+        "publisher": {{
+          "@type": "Organization",
+          "name": "Vetzora",
+          "url": "https://vetzora.cn/",
+          "email": "info@vetzora.cn",
+          "description": "Veterinary API knowledge center for pharmaceutical manufacturers."
+        }}
+      }},
+      {{
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {{"@type":"ListItem","position":1,"name":"Home","item":"https://vetzora.cn/"}},
+          {{"@type":"ListItem","position":2,"name":"Blog","item":"https://vetzora.cn/blog/"}}
+        ]
+      }}
+    ]
+  }}
+  </script>
 </head>
 <body>
 
