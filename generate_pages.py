@@ -369,19 +369,19 @@ def make_product(slug, name, category, category_group, product_type, cas=None, r
 
 NEW_PRODUCTS = [
     # Antiparasitic APIs
-    make_product("fluralaner", "Fluralaner", "Antiparasitic", "Antiparasitic APIs", "Isoxazoline Ectoparasiticide"),
-    make_product("moxidectin", "Moxidectin", "Antiparasitic", "Antiparasitic APIs", "Macrocyclic Lactone Antiparasitic"),
-    make_product("fipronil", "Fipronil", "Antiparasitic", "Antiparasitic APIs", "Phenylpyrazole Ectoparasiticide"),
-    make_product("flumethrin", "Flumethrin", "Antiparasitic", "Antiparasitic APIs", "Pyrethroid Ectoparasiticide"),
-    make_product("monepantel", "Monepantel", "Antiparasitic", "Antiparasitic APIs", "Amino-acetonitrile Derivative (AAD) Anthelmintic"),
+    make_product("fluralaner", "Fluralaner", "Antiparasitic", "Antiparasitic APIs", "Isoxazoline Ectoparasiticide", cas="864731-61-3"),
+    make_product("moxidectin", "Moxidectin", "Antiparasitic", "Antiparasitic APIs", "Macrocyclic Lactone Antiparasitic", cas="113507-06-5"),
+    make_product("fipronil", "Fipronil", "Antiparasitic", "Antiparasitic APIs", "Phenylpyrazole Ectoparasiticide", cas="120068-37-3"),
+    make_product("flumethrin", "Flumethrin", "Antiparasitic", "Antiparasitic APIs", "Pyrethroid Ectoparasiticide", cas="69770-45-2"),
+    make_product("monepantel", "Monepantel", "Antiparasitic", "Antiparasitic APIs", "Amino-acetonitrile Derivative (AAD) Anthelmintic", cas="887148-69-8"),
     # Antibacterial APIs
-    make_product("valnemulin-hydrochloride", "Valnemulin Hydrochloride", "Antibacterial", "Antibacterial APIs", "Pleuromutilin Antibiotic"),
-    make_product("tulathromycin", "Tulathromycin", "Antibacterial", "Antibacterial APIs", "Macrolide Antibiotic"),
+    make_product("valnemulin-hydrochloride", "Valnemulin Hydrochloride", "Antibacterial", "Antibacterial APIs", "Pleuromutilin Antibiotic", cas="133868-46-9"),
+    make_product("tulathromycin", "Tulathromycin", "Antibacterial", "Antibacterial APIs", "Macrolide Antibiotic", cas="217500-96-4"),
     # Anticoccidial / Coccidiostat APIs
-    make_product("toltrazuril", "Toltrazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Triazinone Coccidiostat"),
-    make_product("ponazuril", "Ponazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Triazinone Coccidiostat"),
-    make_product("diclazuril", "Diclazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Benzeneacetonitrile Coccidiostat (Pure & Premix)"),
-    make_product("decoquinate", "Decoquinate", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Quinolone Coccidiostat (Pure & Premix)"),
+    make_product("toltrazuril", "Toltrazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Triazinone Coccidiostat", cas="69004-03-1"),
+    make_product("ponazuril", "Ponazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Triazinone Coccidiostat", cas="69004-04-2"),
+    make_product("diclazuril", "Diclazuril", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Benzeneacetonitrile Coccidiostat (Pure & Premix)", cas="101831-37-2"),
+    make_product("decoquinate", "Decoquinate", "Anticoccidial", "Anticoccidial / Coccidiostat APIs", "Quinolone Coccidiostat (Pure & Premix)", cas="18507-89-6"),
     # Reproductive & Hormonal APIs
     make_product("chorionic-gonadotrophin-hcg", "Chorionic Gonadotrophin (HCG)", "Hormonal", "Reproductive & Hormonal APIs", "Gonadotropin Hormone", cas="9002-61-3"),
     make_product("serum-gonadotrophin-pmsg", "Serum Gonadotrophin (PMSG)", "Hormonal", "Reproductive & Hormonal APIs", "Gonadotropin Hormone", cas="9002-70-4"),
@@ -402,11 +402,11 @@ NEW_PRODUCTS = [
     # Cardiovascular & Metabolic APIs
     make_product("pimobendan", "Pimobendan", "Cardiovascular", "Cardiovascular & Metabolic APIs", "Inodilator (PDE-III/IV Inhibitor)", cas="74150-27-9"),
     make_product("trilostane", "Trilostane", "Cardiovascular", "Cardiovascular & Metabolic APIs", "Steroid Synthesis Inhibitor (3beta-HSD)", cas="13647-35-3"),
-    make_product("menbuton", "Menbuton", "Cardiovascular", "Cardiovascular & Metabolic APIs", "Choleretic / Hepatobiliary Agent"),
+    make_product("menbuton", "Menbuton", "Cardiovascular", "Cardiovascular & Metabolic APIs", "Choleretic / Hepatobiliary Agent", cas="3562-99-0"),
     # Anti-inflammatory & Immunomodulatory APIs
-    make_product("oclacitinib-maleate", "Oclacitinib Maleate", "Anti-inflammatory", "Anti-inflammatory & Immunomodulatory APIs", "Janus Kinase (JAK) Inhibitor"),
+    make_product("oclacitinib-maleate", "Oclacitinib Maleate", "Anti-inflammatory", "Anti-inflammatory & Immunomodulatory APIs", "Janus Kinase (JAK) Inhibitor", cas="1208319-27-0"),
     # Growth Promotant APIs
-    make_product("zilpaterol-hcl", "Zilpaterol HCl", "Growth Promotant", "Growth Promotant APIs", "Beta-2 Agonist (Growth Promotant)"),
+    make_product("zilpaterol-hcl", "Zilpaterol HCl", "Growth Promotant", "Growth Promotant APIs", "Beta-2 Agonist (Growth Promotant)", cas="119520-06-8"),
 ]
 
 PRODUCTS.extend(NEW_PRODUCTS)
