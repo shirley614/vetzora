@@ -1,6 +1,11 @@
 import os
+import re
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def group_anchor(group_name):
+    """Stable anchor id for a product category group (used by nav dropdown & products index)."""
+    return re.sub(r"[^a-z0-9]+", "-", group_name.lower()).strip("-")
 
 # ===== Shared Header & Footer =====
 def build_nav_html():
@@ -9,17 +14,19 @@ def build_nav_html():
         "Reproductive & Hormonal APIs", "Cardiovascular & Metabolic APIs",
         "Anti-inflammatory & Immunomodulatory APIs", "Growth Promotant APIs", "Other Veterinary APIs",
     ]
-    by_group = {}
-    for p in PRODUCTS:
-        by_group.setdefault(p["category_group"], []).append(p)
-    dropdown = ""
+    groups_present = {p["category_group"] for p in PRODUCTS}
+    by_slug = {p["slug"]: p for p in PRODUCTS}
+    featured_slugs = ["paromomycin-sulfate", "virginiamycin"]  # key products shown individually
+    dropdown = '              <div class="dropdown-label">Featured Products</div>\n'
+    for slug in featured_slugs:
+        p = by_slug.get(slug)
+        if p:
+            dropdown += f'              <a href="/veterinary-apis/{slug}/" class="dropdown-featured">&#9733; {p["name"]}</a>\n'
+    dropdown += '              <div class="dropdown-label" style="margin-top:8px;border-top:1px solid #e2e8f0;padding-top:8px">Browse by Category</div>\n'
     for g in groups_order:
-        items = by_group.get(g)
-        if not items:
+        if g not in groups_present:
             continue
-        dropdown += f'              <div class="dropdown-label">{g}</div>\n'
-        for p in items:
-            dropdown += f'              <a href="/veterinary-apis/{p["slug"]}/">{p["name"]}</a>\n'
+        dropdown += f'              <a href="/veterinary-apis/#{group_anchor(g)}" class="dropdown-group">{g}</a>\n'
     dropdown += '              <div class="dropdown-label" style="margin-top:8px;border-top:1px solid #e2e8f0;padding-top:8px">All Products</div>\n'
     dropdown += '              <a href="/veterinary-apis/" style="font-weight:600;color:#2563eb">View All Veterinary APIs</a>\n'
     return f'''  <header id="header" class="always-solid">
@@ -647,7 +654,7 @@ for p in PRODUCTS:
     groups[g].append(p)
 
 for group_name, products in groups.items():
-    category_html += f'      <div class="product-category-group">\n        <h3>{group_name}</h3>\n        <div class="product-grid">\n'
+    category_html += f'      <div class="product-category-group" id="{group_anchor(group_name)}">\n        <h3>{group_name}</h3>\n        <div class="product-grid">\n'
     for p in products:
         category_html += f'          <a href="/veterinary-apis/{p["slug"]}/" class="product-card">\n'
         category_html += f'            <h4>{p["name"]}</h4>\n'
