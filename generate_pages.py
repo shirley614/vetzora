@@ -929,26 +929,160 @@ with open(os.path.join(BASE_DIR, "contact", "index.html"), "w", encoding="utf-8"
 print("Generated: contact/index.html")
 
 # ===== Blog Page =====
+# ===== Blog Posts (full article content) =====
+B1 = """<p>Virginiamycin is a streptogramin-class antibiotic used in veterinary medicine, primarily to support gut health and growth performance in poultry and swine. It is a fermentation-derived mixture of two synergistic factors &mdash; Virginiamycin M1 and Virginiamycin S1 &mdash; that bind the bacterial 50S ribosomal subunit and inhibit protein synthesis.</p>
+<h2>Veterinary applications</h2>
+<ul>
+  <li><strong>Poultry:</strong> prevention of necrotic enteritis caused by <em>Clostridium perfringens</em> and improvement of feed conversion.</li>
+  <li><strong>Swine:</strong> control of intestinal infections and support of growth performance.</li>
+  <li>Supplied as Virginiamycin API (pure and premix forms) to veterinary pharmaceutical manufacturers.</li>
+</ul>
+<h2>Typical specifications</h2>
+<table>
+  <tr><th>Item</th><th>Typical value</th></tr>
+  <tr><td>Appearance</td><td>Pale yellow to tan powder</td></tr>
+  <tr><td>Assay (M1 + S1)</td><td>90.0% &ndash; 110.0%</td></tr>
+  <tr><td>Loss on drying</td><td>&le; 5.0%</td></tr>
+  <tr><td>Heavy metals</td><td>&le; 20 ppm</td></tr>
+</table>
+<h2>Supply considerations</h2>
+<p>When sourcing Virginiamycin API, request a current Certificate of Analysis (COA), stability data, and confirm compliance with the target market&rsquo;s residue and withdrawal regulations. Availability of GMP and DMF documentation varies by supplier and destination.</p>
+<p>Vetzora supplies Virginiamycin API to veterinary pharmaceutical manufacturers worldwide. For documentation and lead times, visit the <a href="/veterinary-apis/virginiamycin/">Virginiamycin product page</a> or <a href="/contact/">contact our team</a>.</p>"""
+
+B2 = """<p>Choosing a Virginiamycin supplier in China is less about price alone and more about documentation, consistency and reliability. Below are the factors we recommend buyers verify before placing an order.</p>
+<h2>1. Documentation and quality system</h2>
+<ul>
+  <li>Current COA for each batch, tested against an agreed specification.</li>
+  <li>Stability and shelf-life data.</li>
+  <li>GMP and, where required by the destination market, DMF or equivalent filing status.</li>
+</ul>
+<h2>2. Supply consistency</h2>
+<p>Ask for typical lead times and whether the supplier holds buffer stock. For ongoing formulations, a stable assay and particle-size profile across batches matters more than a one-off low quote.</p>
+<h2>3. Regulatory fit</h2>
+<p>Confirm the supplier understands the residue limits and withdrawal periods applicable in your market (e.g., EU, US, Latin America). Misaligned documentation is the most common cause of rejected shipments.</p>
+<h2>4. Communication</h2>
+<p>Responsive technical communication &mdash; not just sales &mdash; is a strong signal of a partner you can rely on for re-orders and troubleshooting.</p>
+<p>Vetzora works as a sourcing and supply partner for Virginiamycin and other veterinary APIs, focused on clear documentation and dependable delivery. <a href="/contact/">Talk to our team</a> about your requirements.</p>"""
+
+B3 = """<p>This page summarizes key product information for Virginiamycin API intended for veterinary pharmaceutical manufacturers.</p>
+<h2>Identification</h2>
+<table>
+  <tr><th>Property</th><th>Detail</th></tr>
+  <tr><td>INN</td><td>Virginiamycin</td></tr>
+  <tr><td>Class</td><td>Streptogramin antibiotic</td></tr>
+  <tr><td>Form</td><td>Pure API and premix</td></tr>
+</table>
+<h2>Storage and handling</h2>
+<ul>
+  <li>Store in a cool, dry place, protected from light.</li>
+  <li>Keep container tightly closed; reseal after each use.</li>
+  <li>Follow local regulations for antibiotic handling and disposal.</li>
+</ul>
+<h2>Documentation package</h2>
+<p>A standard Virginiamycin API documentation package includes COA, specification sheet, SDS, and storage/stability guidance. Market-specific filings (GMP, DMF) should be confirmed per destination.</p>
+<p>For the latest specification sheet and availability, see the <a href="/veterinary-apis/virginiamycin/">Virginiamycin product page</a> or <a href="/contact/">contact Vetzora</a>.</p>"""
+
+B4 = """<p>China is a major source of veterinary active pharmaceutical ingredients (APIs). This guide outlines a practical workflow for sourcing them responsibly.</p>
+<h2>Step 1 &mdash; Define your specification</h2>
+<p>Start from the finished-product requirement: target assay, impurities, packaging, and the destination market&rsquo;s regulatory limits. A precise spec prevents costly rework.</p>
+<h2>Step 2 &mdash; Shortlist suppliers</h2>
+<ul>
+  <li>Verify business presence and export experience for your molecule.</li>
+  <li>Request COA samples and, where possible, third-party test reports.</li>
+  <li>Check references from buyers in your region.</li>
+</ul>
+<h2>Step 3 &mdash; Validate documentation</h2>
+<p>Confirm GMP/DMF status, SDS, and any residue/withdrawal compliance needed for your market.</p>
+<h2>Step 4 &mdash; Logistics and QC</h2>
+<p>Plan controlled-temperature transport only if required, and keep an incoming-QC step at your site.</p>
+<h2>Why work with a focused partner</h2>
+<p>A dedicated sourcing partner can consolidate documentation, manage re-orders, and reduce the back-and-forth of dealing with many factories. Vetzora focuses on veterinary APIs and can support this workflow end to end. <a href="/contact/">Get in touch</a>.</p>"""
+
+B5 = """<p>Before committing to a purchase of veterinary APIs from a Chinese supplier, run through these essential checks.</p>
+<h2>COA verification</h2>
+<ul>
+  <li>Does the COA match your agreed specification and batch number?</li>
+  <li>Is the testing laboratory credible and independent where it matters?</li>
+</ul>
+<h2>Regulatory alignment</h2>
+<p>Confirm the supplier can meet the residue limits, withdrawal periods and labeling rules of your destination market.</p>
+<h2>Supply-chain reliability</h2>
+<ul>
+  <li>Typical and worst-case lead times.</li>
+  <li>Buffer-stock policy and minimum order quantity.</li>
+  <li>Track record of on-spec, on-time delivery.</li>
+</ul>
+<h2>Commercial clarity</h2>
+<p>Agree on Incoterms, payment terms, and a clear dispute/return process before payment. Ambiguity here is where most cross-border problems start.</p>
+<p>Vetzora helps buyers apply these checks systematically when sourcing veterinary APIs from China. <a href="/contact/">Contact us</a> to discuss your molecule.</p>"""
+
 blog_posts = [
-    ("what-is-virginiamycin", "What Is Virginiamycin? Uses, Specifications and Veterinary API Supply", "An overview of Virginiamycin, its veterinary applications, specifications and supply considerations for pharmaceutical manufacturers.", "2026-09-22"),
-    ("virginiamycin-supplier-china", "How to Choose a Reliable Virginiamycin Supplier in China", "Key factors to evaluate when sourcing Virginiamycin from Chinese suppliers, including quality documentation and supply capability.", "2026-09-22"),
-    ("virginiamycin-api", "Virginiamycin API: Product Information for Veterinary Manufacturers", "Technical product information for Virginiamycin API, including CAS, specifications and documentation for veterinary pharmaceutical use.", "2026-09-22"),
-    ("source-veterinary-apis-from-china", "How to Source Veterinary APIs from China", "A guide to sourcing veterinary active pharmaceutical ingredients from China, covering supplier evaluation, documentation and logistics.", "2026-09-22"),
-    ("buying-veterinary-apis-from-china", "What Should You Check When Buying Veterinary APIs from China?", "Essential checks when purchasing veterinary APIs from Chinese suppliers, from COA verification to supply chain reliability.", "2026-09-22"),
+    {"slug": "what-is-virginiamycin", "title": "What Is Virginiamycin? Uses, Specifications and Veterinary API Supply", "desc": "An overview of Virginiamycin, its veterinary applications, specifications and supply considerations for pharmaceutical manufacturers.", "date": "2026-09-22", "body": B1},
+    {"slug": "virginiamycin-supplier-china", "title": "How to Choose a Reliable Virginiamycin Supplier in China", "desc": "Key factors to evaluate when sourcing Virginiamycin from Chinese suppliers, including quality documentation and supply capability.", "date": "2026-09-22", "body": B2},
+    {"slug": "virginiamycin-api", "title": "Virginiamycin API: Product Information for Veterinary Manufacturers", "desc": "Technical product information for Virginiamycin API, including specifications and documentation for veterinary pharmaceutical use.", "date": "2026-09-22", "body": B3},
+    {"slug": "source-veterinary-apis-from-china", "title": "How to Source Veterinary APIs from China", "desc": "A guide to sourcing veterinary active pharmaceutical ingredients from China, covering supplier evaluation, documentation and logistics.", "date": "2026-09-22", "body": B4},
+    {"slug": "buying-veterinary-apis-from-china", "title": "What Should You Check When Buying Veterinary APIs from China?", "desc": "Essential checks when purchasing veterinary APIs from Chinese suppliers, from COA verification to supply chain reliability.", "date": "2026-09-22", "body": B5},
 ]
 
 blog_cards_html = ""
-for slug, title, desc, date in blog_posts:
-    blog_cards_html += f"""        <a href="/blog/" class="blog-card">
-          <div class="blog-card-img"><span>{title[0]}</span></div>
+for p in blog_posts:
+    blog_cards_html += f"""        <a href="/blog/{p['slug']}/" class="blog-card">
+          <div class="blog-card-img"><span>{p['title'][0]}</span></div>
           <div class="blog-card-body">
-            <p class="blog-card-date">{date}</p>
-            <h3>{title}</h3>
-            <p>{desc}</p>
+            <p class="blog-card-date">{p['date']}</p>
+            <h3>{p['title']}</h3>
+            <p>{p['desc']}</p>
             <span class="blog-read-more">Read More &rarr;</span>
           </div>
         </a>
 """
+
+for p in blog_posts:
+    article_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{p['title']} | Vetzora</title>
+  <meta name="description" content="{p['desc']}">
+  <link rel="canonical" href="https://vetzora.cn/blog/{p['slug']}/">
+  <meta name="robots" content="index, follow">
+{FAVICON}  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{p['title']}",
+    "description": "{p['desc']}",
+    "datePublished": "{p['date']}",
+    "author": {{"@type":"Organization","name":"Vetzora"}},
+    "publisher": {{"@type":"Organization","name":"Vetzora","url":"https://vetzora.cn/"}}
+  }}
+  </script>
+</head>
+<body>
+{NAV_HTML}
+  <section class="page-hero">
+    <div class="hero-pattern"></div>
+    <div class="container page-hero-content">
+      <h1>{p['title']}</h1>
+      <p class="page-subtitle">Vetzora Knowledge Center</p>
+    </div>
+  </section>
+  <nav class="breadcrumbs"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li>{p['title']}</li></ol></div></nav>
+  <section class="products-section" style="background:var(--color-bg);padding:60px 0 100px">
+    <div class="container">
+      <article class="article-body">
+{p['body']}
+      </article>
+      <p style="margin-top:40px"><a href="/blog/" class="btn-primary">&larr; Back to Knowledge Center</a></p>
+    </div>
+  </section>
+{FOOTER_HTML}"""
+    os.makedirs(os.path.join(BASE_DIR, "blog", p["slug"]), exist_ok=True)
+    with open(os.path.join(BASE_DIR, "blog", p["slug"], "index.html"), "w", encoding="utf-8") as f:
+        f.write(article_html)
+    print(f"Generated: blog/{p['slug']}/index.html")
 
 blog_html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -1032,11 +1166,13 @@ urls = [
 ]
 for p in PRODUCTS:
     urls.append(f"https://vetzora.cn/veterinary-apis/{p['slug']}/")
+for p in blog_posts:
+    urls.append(f"https://vetzora.cn/blog/{p['slug']}/")
 
 sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
 sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for url in urls:
-    sitemap += f'  <url><loc>{url}</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
+    sitemap += f'  <url><loc>{url}</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
 sitemap += '</urlset>\n'
 
 with open(os.path.join(BASE_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:
