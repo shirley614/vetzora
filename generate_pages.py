@@ -1057,6 +1057,66 @@ B7 = """<p>Doramectin is a macrocyclic lactone (avermectin-family) antiparasitic
 <p>When sourcing Doramectin API, request a current COA, solvent-residue and impurity profile, and confirm the supplier understands the residue limits and withdrawal periods of your destination market. Lead times and buffer-stock policy matter for formulation continuity, so clarify them up front.</p>
 <p>Vetzora supplies Doramectin raw material for veterinary pharmaceutical manufacturers. For documentation and lead times, visit the <a href="/veterinary-apis/doramectin/">Doramectin product page</a> or <a href="/contact/">contact our team</a>.</p>"""
 
+B8 = """<p>Toltrazuril is a triazinone coccidiostat used in veterinary medicine to control coccidiosis &mdash; an intestinal protozoal disease caused by <em>Eimeria</em> species that affects poultry, rabbits and several livestock species. Its action covers all intracellular developmental stages of the coccidia, which is why it is valued for both treatment and prevention programs.</p>
+<h2>Veterinary applications</h2>
+<ul>
+  <li><strong>Poultry:</strong> control of coccidiosis in broilers, layers and breeders, commonly delivered via drinking water.</li>
+  <li><strong>Rabbits:</strong> prevention and treatment of hepatic and intestinal coccidiosis.</li>
+  <li><strong>Cattle, sheep and pigs:</strong> used in region-specific programs against neonatal and growing-animal coccidiosis, under local label claims and withdrawal rules.</li>
+</ul>
+<h2>Typical specifications</h2>
+<table>
+  <tr><th>Item</th><th>Typical value</th></tr>
+  <tr><td>Product</td><td>Toltrazuril (API)</td></tr>
+  <tr><td>CAS No.</td><td>69004-03-1</td></tr>
+  <tr><td>Class</td><td>Triazinone coccidiostat</td></tr>
+  <tr><td>Appearance</td><td>White to off-white powder</td></tr>
+  <tr><td>Assay</td><td>Per agreed pharmacopeial / customer specification</td></tr>
+</table>
+<h2>Supply considerations</h2>
+<p>When sourcing Toltrazuril API, request a current COA, assay and impurity profile, and confirm the supplier understands the residue limits and withdrawal periods of your destination market. Drinking-water and premix presentations follow different formulation needs, so align the specification with your final product.</p>
+<p>Vetzora supplies Toltrazuril raw material for veterinary pharmaceutical manufacturers. For documentation and lead times, visit the <a href="/veterinary-apis/toltrazuril/">Toltrazuril product page</a> or <a href="/contact/">contact our team</a>.</p>"""
+
+B9 = """<p>Emodepside is a cyclooctadepsipeptide antiparasitic agent used in veterinary medicine, primarily for companion animals. It belongs to a distinct chemical class from the macrocyclic lactones and is often formulated in combination products for broad-spectrum parasite control in cats and dogs.</p>
+<h2>Veterinary applications</h2>
+<ul>
+  <li><strong>Cats:</strong> control of gastrointestinal roundworms and hookworms, and commonly combined with praziquantel for tapeworm coverage.</li>
+  <li><strong>Dogs:</strong> used in companion-animal endoparasite programs where a cyclooctadepsipeptide fits the parasite spectrum.</li>
+  <li><strong>Mechanism note:</strong> Emodepside acts on parasite latrophilin receptors, a different target from avermectins &mdash; useful in resistance-management thinking.</li>
+</ul>
+<h2>Typical specifications</h2>
+<table>
+  <tr><th>Item</th><th>Typical value</th></tr>
+  <tr><td>Product</td><td>Emodepside (API)</td></tr>
+  <tr><td>CAS No.</td><td>155030-63-0</td></tr>
+  <tr><td>Class</td><td>Cyclooctadepsipeptide antiparasitic</td></tr>
+  <tr><td>Appearance</td><td>White to off-white powder</td></tr>
+  <tr><td>Assay</td><td>Per agreed pharmacopeial / customer specification</td></tr>
+</table>
+<h2>Supply considerations</h2>
+<p>When sourcing Emodepside API, request a current COA, purity and impurity profile, and confirm documentation fit with the target market&rsquo;s regulatory and residue framework. Combination-product formulations have specific compatibility and stability requirements, so discuss these with your supplier early.</p>
+<p>Vetzora supplies Emodepside raw material for veterinary pharmaceutical manufacturers. For documentation and lead times, visit the <a href="/veterinary-apis/emodepside/">Emodepside product page</a> or <a href="/contact/">contact our team</a>.</p>"""
+
+B10 = """<p>Selamectin is a semi-synthetic macrocyclic lactone antiparasitic agent used in veterinary medicine, especially for companion animals. It is a popular active in spot-on (topical) formulations for dogs and cats, valued for its broad-spectrum coverage of both external and internal parasites.</p>
+<h2>Veterinary applications</h2>
+<ul>
+  <li><strong>Dogs and cats:</strong> flea control, prevention of heartworm disease (<em>Dirofilaria immitis</em>), and treatment of ear mites, sarcoptic mange and intestinal nematodes.</li>
+  <li><strong>Convenience formats:</strong> supplied as an API for topical and, in some markets, oral companion-animal antiparasitic products.</li>
+  <li><strong>Broad spectrum:</strong> an endectocide covering arthropods and selected nematodes in the companion-animal segment.</li>
+</ul>
+<h2>Typical specifications</h2>
+<table>
+  <tr><th>Item</th><th>Typical value</th></tr>
+  <tr><td>Product</td><td>Selamectin (API)</td></tr>
+  <tr><td>CAS No.</td><td>220989-52-0</td></tr>
+  <tr><td>Class</td><td>Macrocyclic lactone antiparasitic</td></tr>
+  <tr><td>Appearance</td><td>White to pale yellow powder</td></tr>
+  <tr><td>Assay</td><td>Per agreed pharmacopeial / customer specification</td></tr>
+</table>
+<h2>Supply considerations</h2>
+<p>When sourcing Selamectin API, request a current COA, solvent-residue and impurity profile, and confirm the supplier understands the residue limits and withdrawal periods of your destination market. Topical formulation quality depends heavily on consistent assay and particle characteristics, so agree them before ordering.</p>
+<p>Vetzora supplies Selamectin raw material for veterinary pharmaceutical manufacturers. For documentation and lead times, visit the <a href="/veterinary-apis/selamectin/">Selamectin product page</a> or <a href="/contact/">contact our team</a>.</p>"""
+
 blog_posts = [
     {"slug": "what-is-virginiamycin", "title": "What Is Virginiamycin? Uses, Specifications and Veterinary API Supply", "desc": "An overview of Virginiamycin, its veterinary applications, specifications and supply considerations for pharmaceutical manufacturers.", "date": "2026-09-22", "body": B1},
     {"slug": "virginiamycin-supplier-china", "title": "How to Choose a Reliable Virginiamycin Supplier in China", "desc": "Key factors to evaluate when sourcing Virginiamycin from Chinese suppliers, including quality documentation and supply capability.", "date": "2026-09-22", "body": B2},
@@ -1065,6 +1125,9 @@ blog_posts = [
     {"slug": "buying-veterinary-apis-from-china", "title": "What Should You Check When Buying Veterinary APIs from China?", "desc": "Essential checks when purchasing veterinary APIs from Chinese suppliers, from COA verification to supply chain reliability.", "date": "2026-09-22", "body": B5},
     {"slug": "paromomycin-sulfate-veterinary-api", "title": "Paromomycin Sulfate: Veterinary API Overview & Supply", "desc": "An overview of Paromomycin Sulfate as a veterinary API, its animal-health applications, typical specifications and supply considerations.", "date": "2026-09-29", "body": B6},
     {"slug": "doramectin-veterinary-api", "title": "Doramectin: Veterinary API Overview & Supply", "desc": "An overview of Doramectin as a veterinary API, its antiparasitic applications in livestock and companion animals, typical specifications and supply considerations.", "date": "2026-09-29", "body": B7},
+    {"slug": "toltrazuril-veterinary-api", "title": "Toltrazuril: Veterinary API Overview & Supply", "desc": "An overview of Toltrazuril as a veterinary API, its anticoccidial applications in poultry, rabbits and livestock, typical specifications and supply considerations.", "date": "2026-09-29", "body": B8},
+    {"slug": "emodepside-veterinary-api", "title": "Emodepside: Veterinary API Overview & Supply", "desc": "An overview of Emodepside as a veterinary API, its companion-animal antiparasitic applications, typical specifications and supply considerations.", "date": "2026-09-29", "body": B9},
+    {"slug": "selamectin-veterinary-api", "title": "Selamectin: Veterinary API Overview & Supply", "desc": "An overview of Selamectin as a veterinary API, its companion-animal antiparasitic applications, typical specifications and supply considerations.", "date": "2026-09-29", "body": B10},
 ]
 
 blog_cards_html = ""
