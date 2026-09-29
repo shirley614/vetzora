@@ -1016,12 +1016,55 @@ B5 = """<p>Before committing to a purchase of veterinary APIs from a Chinese sup
 <p>Agree on Incoterms, payment terms, and a clear dispute/return process before payment. Ambiguity here is where most cross-border problems start.</p>
 <p>Vetzora helps buyers apply these checks systematically when sourcing veterinary APIs from China. <a href="/contact/">Contact us</a> to discuss your molecule.</p>"""
 
+B6 = """<p>Paromomycin Sulfate is an aminoglycoside antibiotic used in veterinary and animal-health applications where localized, gut-acting antimicrobial activity is needed. Because it is poorly absorbed from the gastrointestinal tract, its action is concentrated in the intestine &mdash; a useful property for certain enteric indications.</p>
+<h2>Veterinary applications</h2>
+<ul>
+  <li><strong>Companion animals:</strong> support in the management of intestinal protozoal infections such as <em>Giardia</em> in dogs and cats, where a locally acting aminoglycoside is preferred.</li>
+  <li><strong>Food and production animals:</strong> used in formulations targeting enteric bacterial and parasitic challenges, subject to the residue and withdrawal rules of the destination market.</li>
+  <li><strong>Aquaculture and specialty segments:</strong> included in some regional parasite-control programs where an oral, gut-restricted aminoglycoside fits the protocol.</li>
+</ul>
+<h2>Typical specifications</h2>
+<table>
+  <tr><th>Item</th><th>Typical value</th></tr>
+  <tr><td>Product</td><td>Paromomycin Sulfate (API)</td></tr>
+  <tr><td>CAS No.</td><td>1263-89-4</td></tr>
+  <tr><td>Class</td><td>Aminoglycoside antibiotic</td></tr>
+  <tr><td>Appearance</td><td>White to off-white powder</td></tr>
+  <tr><td>Assay</td><td>Per agreed pharmacopeial / customer specification</td></tr>
+</table>
+<h2>Supply considerations</h2>
+<p>When sourcing Paromomycin Sulfate, request a current Certificate of Analysis (COA), microbial and purity profile, and confirm fit with the target market&rsquo;s residue limits and withdrawal periods. Documentation scope (GMP, DMF and stability data) varies by supplier and destination, so agree it before ordering.</p>
+<p>Paromomycin Sulfate is one of Vetzora&rsquo;s featured products. For specifications, COA and commercial supply, visit the <a href="/veterinary-apis/paromomycin-sulfate/">Paromomycin Sulfate product page</a> or <a href="/contact/">contact our team</a>.</p>"""
+
+B7 = """<p>Doramectin is a macrocyclic lactone (avermectin-family) antiparasitic agent used in veterinary medicine for the treatment and control of internal and external parasites in livestock and companion animals. It is an <em>endectocide</em> &mdash; active against both nematodes and arthropods &mdash; making it a versatile choice across production species.</p>
+<h2>Veterinary applications</h2>
+<ul>
+  <li><strong>Cattle:</strong> broad-spectrum control of gastrointestinal roundworms, lungworms, mange mites, lice and grubs.</li>
+  <li><strong>Swine:</strong> control of internal nematodes and external parasites such as mange and lice.</li>
+  <li><strong>Sheep and other livestock:</strong> used in region-specific parasite-control programs under local label claims.</li>
+  <li><strong>Companion animals:</strong> included in some antiparasitic protocols where a macrocyclic lactone fits the parasite spectrum.</li>
+</ul>
+<h2>Typical specifications</h2>
+<table>
+  <tr><th>Item</th><th>Typical value</th></tr>
+  <tr><td>Product</td><td>Doramectin (API)</td></tr>
+  <tr><td>CAS No.</td><td>117704-25-7</td></tr>
+  <tr><td>Class</td><td>Macrocyclic lactone antiparasitic</td></tr>
+  <tr><td>Appearance</td><td>White to pale yellow powder</td></tr>
+  <tr><td>Assay</td><td>Per agreed pharmacopeial / customer specification</td></tr>
+</table>
+<h2>Supply considerations</h2>
+<p>When sourcing Doramectin API, request a current COA, solvent-residue and impurity profile, and confirm the supplier understands the residue limits and withdrawal periods of your destination market. Lead times and buffer-stock policy matter for formulation continuity, so clarify them up front.</p>
+<p>Vetzora supplies Doramectin raw material for veterinary pharmaceutical manufacturers. For documentation and lead times, visit the <a href="/veterinary-apis/doramectin/">Doramectin product page</a> or <a href="/contact/">contact our team</a>.</p>"""
+
 blog_posts = [
     {"slug": "what-is-virginiamycin", "title": "What Is Virginiamycin? Uses, Specifications and Veterinary API Supply", "desc": "An overview of Virginiamycin, its veterinary applications, specifications and supply considerations for pharmaceutical manufacturers.", "date": "2026-09-22", "body": B1},
     {"slug": "virginiamycin-supplier-china", "title": "How to Choose a Reliable Virginiamycin Supplier in China", "desc": "Key factors to evaluate when sourcing Virginiamycin from Chinese suppliers, including quality documentation and supply capability.", "date": "2026-09-22", "body": B2},
     {"slug": "virginiamycin-api", "title": "Virginiamycin API: Product Information for Veterinary Manufacturers", "desc": "Technical product information for Virginiamycin API, including specifications and documentation for veterinary pharmaceutical use.", "date": "2026-09-22", "body": B3},
     {"slug": "source-veterinary-apis-from-china", "title": "How to Source Veterinary APIs from China", "desc": "A guide to sourcing veterinary active pharmaceutical ingredients from China, covering supplier evaluation, documentation and logistics.", "date": "2026-09-22", "body": B4},
     {"slug": "buying-veterinary-apis-from-china", "title": "What Should You Check When Buying Veterinary APIs from China?", "desc": "Essential checks when purchasing veterinary APIs from Chinese suppliers, from COA verification to supply chain reliability.", "date": "2026-09-22", "body": B5},
+    {"slug": "paromomycin-sulfate-veterinary-api", "title": "Paromomycin Sulfate: Veterinary API Overview & Supply", "desc": "An overview of Paromomycin Sulfate as a veterinary API, its animal-health applications, typical specifications and supply considerations.", "date": "2026-09-29", "body": B6},
+    {"slug": "doramectin-veterinary-api", "title": "Doramectin: Veterinary API Overview & Supply", "desc": "An overview of Doramectin as a veterinary API, its antiparasitic applications in livestock and companion animals, typical specifications and supply considerations.", "date": "2026-09-29", "body": B7},
 ]
 
 blog_cards_html = ""
@@ -1172,7 +1215,7 @@ for p in blog_posts:
 sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
 sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for url in urls:
-    sitemap += f'  <url><loc>{url}</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
+    sitemap += f'  <url><loc>{url}</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n'
 sitemap += '</urlset>\n'
 
 with open(os.path.join(BASE_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:
