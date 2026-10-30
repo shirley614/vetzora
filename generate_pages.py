@@ -601,8 +601,8 @@ category_html = f"""<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veterinary APIs &mdash; Product Catalog | Vetzora</title>
-  <meta name="description" content="Vetzora's veterinary API catalog includes antiparasitic APIs, antibacterial APIs and other veterinary pharmaceutical ingredients for animal health manufacturers worldwide.">
+  <title>Veterinary APIs from China &mdash; Manufacturer &amp; Supplier Catalog | Vetzora</title>
+  <meta name="description" content="Vetzora is a China-based veterinary API manufacturer and supplier offering antiparasitic, antibacterial, anticoccidial and hormonal APIs for animal health companies worldwide. COA and samples available.">
   <link rel="canonical" href="https://vetzora.cn/veterinary-apis/">
   <meta name="robots" content="index, follow">
 {FAVICON}  <link rel="stylesheet" href="/style.css">
@@ -626,7 +626,7 @@ category_html = f"""<!DOCTYPE html>
     <div class="container page-hero-content">
       <h1>Veterinary APIs</h1>
       <p class="page-subtitle">Veterinary Active Pharmaceutical Ingredients</p>
-      <p class="page-description">Vetzora supplies veterinary active pharmaceutical ingredients covering antiparasitic, antibacterial and other categories for animal health manufacturers worldwide.</p>
+      <p class="page-description">Vetzora is a veterinary API manufacturer and supplier based in China, supplying antiparasitic, antibacterial, anticoccidial and hormonal active pharmaceutical ingredients for animal health manufacturers worldwide.</p>
     </div>
   </section>
 
@@ -1073,6 +1073,9 @@ B8 = """<p>Toltrazuril is a triazinone coccidiostat used in veterinary medicine 
   <tr><td>Appearance</td><td>White to off-white powder</td></tr>
   <tr><td>Assay</td><td>Per agreed pharmacopeial / customer specification</td></tr>
 </table>
+<h2>Toltrazuril market and supply overview</h2>
+<p>Global toltrazuril supply is concentrated in China, where multiple GMP-capable plants produce both API-grade powder and premix-grade material. Demand is driven by intensive poultry and rabbit production and by the continued need for anticoccidial programs in markets where vaccination alone does not fully control <em>Eimeria</em>. Buyers typically evaluate suppliers on assay consistency, impurity profile, batch-to-batch documentation and the ability to support both drinking-water and premix formulations.</p>
+<p>Prices and availability vary with raw material conditions and order volume, so buyers generally compare quotes from several manufacturers and verify quality through an independent COA review and a sample batch before committing to volume supply.</p>
 <h2>Supply considerations</h2>
 <p>When sourcing Toltrazuril API, request a current COA, assay and impurity profile, and confirm the supplier understands the residue limits and withdrawal periods of your destination market. Drinking-water and premix presentations follow different formulation needs, so align the specification with your final product.</p>
 <p>Vetzora supplies Toltrazuril raw material for veterinary pharmaceutical manufacturers. For documentation and lead times, visit the <a href="/veterinary-apis/toltrazuril/">Toltrazuril product page</a> or <a href="/contact/">contact our team</a>.</p>"""
@@ -1118,14 +1121,14 @@ B10 = """<p>Selamectin is a semi-synthetic macrocyclic lactone antiparasitic age
 <p>Vetzora supplies Selamectin raw material for veterinary pharmaceutical manufacturers. For documentation and lead times, visit the <a href="/veterinary-apis/selamectin/">Selamectin product page</a> or <a href="/contact/">contact our team</a>.</p>"""
 
 blog_posts = [
-    {"slug": "what-is-virginiamycin", "title": "What Is Virginiamycin? Uses, Specifications and Veterinary API Supply", "desc": "An overview of Virginiamycin, its veterinary applications, specifications and supply considerations for pharmaceutical manufacturers.", "date": "2026-09-22", "body": B1},
+    {"slug": "what-is-virginiamycin", "title": "What Is Virginiamycin? Uses, Specifications and Manufacturer Supply", "desc": "An overview of Virginiamycin, its veterinary applications, specifications and what to expect from a China-based virginiamycin manufacturer.", "date": "2026-09-22", "body": B1},
     {"slug": "virginiamycin-supplier-china", "title": "How to Choose a Reliable Virginiamycin Supplier in China", "desc": "Key factors to evaluate when sourcing Virginiamycin from Chinese suppliers, including quality documentation and supply capability.", "date": "2026-09-22", "body": B2},
     {"slug": "virginiamycin-api", "title": "Virginiamycin API: Product Information for Veterinary Manufacturers", "desc": "Technical product information for Virginiamycin API, including specifications and documentation for veterinary pharmaceutical use.", "date": "2026-09-22", "body": B3},
     {"slug": "source-veterinary-apis-from-china", "title": "How to Source Veterinary APIs from China", "desc": "A guide to sourcing veterinary active pharmaceutical ingredients from China, covering supplier evaluation, documentation and logistics.", "date": "2026-09-22", "body": B4},
     {"slug": "buying-veterinary-apis-from-china", "title": "What Should You Check When Buying Veterinary APIs from China?", "desc": "Essential checks when purchasing veterinary APIs from Chinese suppliers, from COA verification to supply chain reliability.", "date": "2026-09-22", "body": B5},
     {"slug": "paromomycin-sulfate-veterinary-api", "title": "Paromomycin Sulfate: Veterinary API Overview & Supply", "desc": "An overview of Paromomycin Sulfate as a veterinary API, its animal-health applications, typical specifications and supply considerations.", "date": "2026-09-29", "body": B6},
     {"slug": "doramectin-veterinary-api", "title": "Doramectin: Veterinary API Overview & Supply", "desc": "An overview of Doramectin as a veterinary API, its antiparasitic applications in livestock and companion animals, typical specifications and supply considerations.", "date": "2026-09-29", "body": B7},
-    {"slug": "toltrazuril-veterinary-api", "title": "Toltrazuril: Veterinary API Overview & Supply", "desc": "An overview of Toltrazuril as a veterinary API, its anticoccidial applications in poultry, rabbits and livestock, typical specifications and supply considerations.", "date": "2026-09-29", "body": B8},
+    {"slug": "toltrazuril-veterinary-api", "title": "Toltrazuril: Veterinary API Overview, Market & Supply", "desc": "An overview of Toltrazuril as a veterinary API: anticoccidial applications in poultry, rabbits and livestock, a global market and manufacturing overview, plus typical specifications and supply considerations.", "date": "2026-09-29", "body": B8},
     {"slug": "emodepside-veterinary-api", "title": "Emodepside: Veterinary API Overview & Supply", "desc": "An overview of Emodepside as a veterinary API, its companion-animal antiparasitic applications, typical specifications and supply considerations.", "date": "2026-09-29", "body": B9},
     {"slug": "selamectin-veterinary-api", "title": "Selamectin: Veterinary API Overview & Supply", "desc": "An overview of Selamectin as a veterinary API, its companion-animal antiparasitic applications, typical specifications and supply considerations.", "date": "2026-09-29", "body": B10},
 ]
